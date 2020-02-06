@@ -1,6 +1,7 @@
 class MyCalendarTwo {
 public:
     vector<pair<int,int>> calendars ;
+    map<int,int> delta ;
     MyCalendarTwo() {
         
     }
@@ -22,6 +23,22 @@ public:
             }
         }
         calendars.push_back(make_pair(start , end)) ;
+        return true ;
+    }
+
+    //利用map,考虑经典的区间差分方法  delta[start]++ , delta[end]--
+    bool book(int start, int end) {
+        delta[start]++ ;
+        delta[end]-- ;
+        int cnt = 0 ;
+        for (auto it = delta.begin() ; it != delta.end() ; ++it) {
+            cnt += it->second ;
+            if (cnt == 3) {
+                delta[start]-- ;
+                delta[end]++ ;
+                return false ;
+            }
+        }
         return true ;
     }
 };
