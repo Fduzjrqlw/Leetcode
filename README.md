@@ -11,3 +11,4 @@ Leetcode国服账号:https://leetcode-cn.com/u/jiangyanerpang/
 |Week171|10|jiangyanerpang|19|0:27:36|
 |Week172|9|jiangyanerpang|18|0:35:42|
 |Week174|11|jiangyanerpang|18|0:29:03|
+|BiWeek19|150|jiangyanerpang|18|1:18:33|
